@@ -1,0 +1,306 @@
+/* Common Elements */
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Common Classes */
+
+.lock {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .lock {
+    padding: 0 40px;
+  }
+}
+
+.call-to-action {
+  color: #808080;
+  border: 1px solid #808080;
+  padding: 20px;
+  white-space: nowrap;
+  transition: background 0.5s, color 0.5s;
+}
+
+.call-to-action:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #353535;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Header */
+
+header {
+  border-bottom: 1px solid #f5f5f5;
+  height: 80px;
+  display: block;
+}
+
+header .lock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header nav a {
+  display: block;
+  color: #808080;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 20px 10px;
+  transition: letter-spacing 0.5s, color 0.5s;
+}
+
+header a:hover {
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  color: black;
+}
+
+header svg {
+  fill: #808080;
+  height: 50px;
+  transition: fill 0.5s;
+}
+
+header a:hover svg {
+  fill: black;
+}
+
+/* Projects */
+
+@media (min-width: 900px) {
+  #projects .lock {
+    display: flex;
+  }
+}
+
+@media (max-width: 899px) {
+  #projects .selector {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  #projects .selector {
+    width: 300px;
+  }
+}
+
+#projects .selector .wrapper {
+  position: relative;
+  padding-top: 30px;
+}
+
+@media (min-width: 900px) {
+  #projects .selector .wrapper {
+    width: 300px;
+  }
+}
+
+#projects .selector .wrapper[data-scrolling] {
+  position: fixed;
+  top: 0;
+}
+
+#projects .selector h2 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects .selector .list {
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  height: calc(100vh - 80px);
+}
+
+#projects .selector button {
+  height: 44px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 16px;
+  background-color: transparent;
+  transition: background 0.5s;
+}
+
+#projects .selector button:hover {
+  background-color: #f5f5f5;
+}
+
+#projects .selector button:last-of-type {
+  border-bottom: none;
+}
+
+#projects .project-list {
+  padding-top: 30px;
+}
+
+@media (min-width: 900px) {
+  #projects .project-list {
+    width: calc(100% - 300px);
+  }
+}
+
+#projects .project-details {
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+#projects .project-details:after {
+  content: '';
+  background-color: #f5f5f5;
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#projects .project-details:last-of-type {
+  margin-bottom: 0;
+}
+
+#projects .project-details:last-of-type:after {
+  display: none;
+}
+
+#projects .details {
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  #projects .details {
+    padding: 0 5%;
+  }
+}
+
+#projects .image {
+  position: relative;
+}
+
+#projects .info {
+  padding-top: 100px;
+}
+
+@media (min-width: 768px) {
+  #projects .info {
+    display: flex;
+    align-items: center;
+  }
+
+  #projects .info > div {
+    padding-right: 40px;
+  }
+}
+
+#projects .call-to-action {
+  margin-left: auto;
+}
+
+@media (max-width: 899px) {
+  #projects .call-to-action {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+#projects img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#projects h3 {
+  font-family: 'Crimson Text', serif;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  transform: translateY(50%);
+  right: 20%;
+  color: #808080;
+  padding: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: calc(22px + 0.5vw);
+  font-weight: 400;
+  line-height: 1em;
+  background-color: #f5f5f5;
+  color: #808080;
+  margin-bottom: 2px;
+}
+
+#projects h3 span {
+  font-size: 14px;
+  display: block;
+  color: black;
+  letter-spacing: 0;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+
+#projects h4 span {
+  font-weight: bold;
+}
+
+#projects .info p {
+  padding-right: 20px;
+  line-height: 1.4em;
+}
+
+#projects .info span {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-size: 22px;
+  position: relative;
+}
+
+#projects .info ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 20px;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+#projects .info li {
+  width: calc(50% - 15px);
+  margin-top: 10px;
+}
+
+#projects .info li:nth-of-type(1),
+#projects .info li:nth-of-type(2) {
+  margin-top: 0;
+}
+
+#projects .info li:nth-of-type(even) {
+  margin-left: 30px;
+}
